@@ -1,0 +1,72 @@
+<!doctype html>
+<script type="text/javascript" src="levelgame.js"></script>
+<html >
+    <head>
+        <title>AVATAR MAZE</title>
+        <link rel="stylesheet" href="levelgame.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    </head>
+    <body onload="loadLevels()" id="body-ent" class="body-ent">
+        <div id="GUI-layer" class="level-GUI level-GUI--intro">
+            <!-- <button onclick="toggleAutoPlay()" class="auto-play">Auto Play</button> -->
+            <div class="avatar-chat">
+                <div class="avatar">
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                    <div class="eye"></div>
+                    <span class="smile">)</span>
+                </div>
+                <div class="chat">
+                    <div id="talker"></div>
+                </div>
+                
+            </div>
+            <div id="player-name-area" class="player-name-area">
+                <h1>Choose your name</h1>
+                <div class="play-name-wrap">
+                    <input type="text" id="player-name" name="player-name" onchange="setPlayName()" onkeyup="setPlayName()">
+                    <input type="button" id="play" value="Go Play!" class="play-button" onclick="sayHello()" >
+                </div>
+            </div>
+            <div id="level-overview" class="level-overview is-hide">
+                <h1>Choose a maze to play</h1>
+                <div id="level-select" class="level-select"> </div>
+            </div>
+            <h1 id="maze-name" class="is-hide">[ MAZE NAME ]</h1>
+            <div id="room-tag" class="room-tag-area"></div>
+            <div id="item-placeholder" class="item-hold"></div>
+            <div id="tag-tile" class="tag-tile-wrap is-hide">
+                <input type="text" id="tile-tag"  placeholder="tag this tile"  name="tile-tag" onchange="setTileTag()" onkeyup="setPlayName()">
+                <input type="button" id="tag" value="Set Tag" class="tag-button" onclick="goTagTile()">
+            </div>   
+            <div id="room-options" class="room-options"></div>
+            <div id="act-buttons" class="HUD-action-buttons">
+                <div id="play-name" class="play-name">?</div>
+                <input type="button" id="forget" type="submit" value="FORGET ME" class="forget-me" onclick="forgetPlayer()">
+                <input type="button" id="bank-button" value="Put Coins in Bank" onclick="goCashToBank()" disabled> 
+                <input type="button" id="exit-button" value="Exit the Maze" onclick="goExitMaze()" disabled> 
+                <div id="play-scores" class="play-scores">
+                    <div class="group">
+                        <div class="label">coins:</div>
+                        <div class="coin-score">
+                            <div id="coin-found">0</div>
+                            <div>/</div>
+                            <span id="total-coin">?</span>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <div class="label">bank:</div>
+                        <div id="bank-score" class="bank-score">0</div>
+                    </div>
+                    <div class="group">
+                        <div class="label">egg:</div>
+                        <div id="egg-find" class="egg-find">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
