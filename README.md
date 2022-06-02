@@ -1,5 +1,5 @@
 # aMAZEr
-maze game with avatar and 'the cube' movie roomtype setup.
+maze game with avatar inspired by 'the cube' 1997 movie roomtype setup. if you want to watch a scary trailer : https://www.youtube.com/watch?v=Esjc0rPj3K4 
 
 (ooo) < Hello stranger, I am eighty8, with this repo you can play some nice mazes, but I surely hope you don't get stuck in any of them, as I may need to escort you out by giving you directions ]
 
